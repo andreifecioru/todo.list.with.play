@@ -1,0 +1,18 @@
+@(activeTasks: Seq[Task], completedTasks: Seq[Task])(implicit messages: Messages)
+
+@main("Your TODO list") {
+
+    <h1>Active tasks</h1>
+    <ul>
+        @for(task <- activeTasks) {
+            <li>@task.action</li>
+        }
+    </ul>
+
+    <h2>Completed tasks</h2>
+    <ul>
+        @for(task <- completedTasks) {
+            <li>@task.action</li>
+        }
+    </ul>
+}
